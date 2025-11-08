@@ -92,3 +92,121 @@ public class Main {
         System.out.println("Ввод обработан успешно!");
     }
 }
+
+import java.util.Scanner;
+
+/**
+ * Основной класс приложения
+ * Версия: 1.1.1
+ * 
+ * Новые функции (MINOR):
+ * - Добавлен интерактивный режим
+ * - Реализована система настроек
+ * 
+ * Исправления ошибок (PATCH):
+ * - Исправлена критическая ошибка в расчетах
+ * - Улучшена производительность
+ */
+public class Main {
+    private static Scanner scanner = new Scanner(System.in);
+    private static String appName = "Улучшенное приложение";
+    
+    /**
+     * Главный метод приложения
+     * @param args аргументы командной строки
+     */
+    public static void main(String[] args) {
+        System.out.println("=== " + appName + " ===");
+        System.out.println("Версия: 1.1.1");
+        System.out.println("Статус: Новые функции + исправления ошибок");
+        
+        startInteractiveMode();
+    }
+    
+    /**
+     * Запускает интерактивный режим работы
+     * Новая функция в версии 1.1.0
+     */
+    public static void startInteractiveMode() {
+        System.out.println("\n--- Интерактивный режим ---");
+        
+        while (true) {
+            displayMenu();
+            String choice = scanner.nextLine();
+            
+            switch (choice) {
+                case "1":
+                    performAdvancedOperation();
+                    break;
+                case "2":
+                    showSettings();
+                    break;
+                case "3":
+                    displayVersionInfo();
+                    break;
+                case "0":
+                    System.out.println("Выход из приложения...");
+                    return;
+                default:
+                    System.out.println("Неверный выбор! Попробуйте снова.");
+            }
+        }
+    }
+    
+    /**
+     * Отображает главное меню
+     */
+    public static void displayMenu() {
+        System.out.println("\nВыберите действие:");
+        System.out.println("1. Выполнить расширенную операцию");
+        System.out.println("2. Настройки");
+        System.out.println("3. Информация о версии");
+        System.out.println("0. Выход");
+        System.out.print("Ваш выбор: ");
+    }
+    
+    /**
+     * Выполняет расширенную операцию
+     * Улучшенная версия в 1.1.0
+     */
+    public static void performAdvancedOperation() {
+        System.out.println("\n--- Расширенная операция ---");
+        System.out.print("Введите первое число: ");
+        int a = scanner.nextInt();
+        System.out.print("Введите второе число: ");
+        int b = scanner.nextInt();
+        scanner.nextLine(); // Очистка буфера
+        
+        int sum = a + b;
+        int product = a * b;
+        
+        System.out.println("Сумма: " + sum);
+        System.out.println("Произведение: " + product);
+        System.out.println("Операция завершена успешно!");
+    }
+    
+    /**
+     * Показывает настройки приложения
+     * Новая функция в версии 1.1.0
+     */
+    public static void showSettings() {
+        System.out.println("\n--- Настройки ---");
+        System.out.println("Текущие настройки:");
+        System.out.println("- Имя приложения: " + appName);
+        System.out.println("- Версия: 1.1.1");
+        System.out.println("- Режим: Интерактивный");
+    }
+    
+    /**
+     * Отображает информацию о версии
+     */
+    public static void displayVersionInfo() {
+        System.out.println("\n--- Информация о версии ---");
+        System.out.println("Версия: 1.1.1");
+        System.out.println("Изменения:");
+        System.out.println("- Добавлен интерактивный режим");
+        System.out.println("- Реализована система настроек");
+        System.out.println("- Исправлены критические ошибки");
+        System.out.println("- Улучшена производительность");
+    }
+}
