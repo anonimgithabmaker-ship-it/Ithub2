@@ -1,0 +1,40 @@
+/**
+ * Основной класс приложения
+ * Версия: 1.0.0
+ * 
+ * Первоначальный выпуск с базовой функциональностью
+ * Выбрана версия 1.0.0, так как это стабильная версия
+ * с полным набором запланированных функций для первого релиза
+ */
+public class Main {
+    
+    /**
+     * Главный метод приложения
+     * @param args аргументы командной строки
+     */
+    public static void main(String[] args) {
+        System.out.println("=== Демонстрационное приложение ===");
+        System.out.println("Версия: 1.0.0");
+        System.out.println("Статус: Первоначальный релиз");
+        
+        // Базовая функциональность
+        displayWelcomeMessage();
+        performBasicOperation();
+    }
+    
+    /**
+     * Отображает приветственное сообщение
+     */
+    public static void displayWelcomeMessage() {
+        System.out.println("Добро пожаловать в наше приложение!");
+    }
+    
+    /**
+     * Выполняет базовую операцию
+     */
+    public static void performBasicOperation() {
+        System.out.println("Выполняется базовая операция...");
+        int result = 5 + 3;
+        System.out.println("Результат: " + result);
+    }
+}
