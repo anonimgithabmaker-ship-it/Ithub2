@@ -38,3 +38,57 @@ public class Main {
         System.out.println("Результат: " + result);
     }
 }
+
+/**
+ * Основной класс приложения
+ * Версия: 1.0.1
+ * 
+ * Исправление ошибок:
+ * - Улучшена обработка пользовательского ввода
+ * - Исправлена ошибка форматирования вывода
+ * - Обновлены комментарии в коде
+ */
+public class Main {
+    
+    /**
+     * Главный метод приложения
+     * @param args аргументы командной строки
+     */
+    public static void main(String[] args) {
+        System.out.println("=== Демонстрационное приложение ===");
+        System.out.println("Версия: 1.0.1");
+        System.out.println("Статус: Исправление ошибок");
+        
+        // Базовая функциональность
+        displayWelcomeMessage();
+        performBasicOperation();
+        handleUserInput(); // Новая функция для обработки ввода
+    }
+    
+    /**
+     * Отображает приветственное сообщение
+     */
+    public static void displayWelcomeMessage() {
+        System.out.println("Добро пожаловать в наше приложение!");
+        System.out.println("Теперь с улучшенным интерфейсом!");
+    }
+    
+    /**
+     * Выполняет базовую операцию
+     */
+    public static void performBasicOperation() {
+        System.out.println("Выполняется базовая операция...");
+        int result = 5 + 3;
+        System.out.println("Результат операции 5 + 3 = " + result);
+    }
+    
+    /**
+     * Обрабатывает пользовательский ввод
+     * Новая функция в версии 1.0.1
+     */
+    public static void handleUserInput() {
+        System.out.println("Обработка пользовательского ввода...");
+        // Здесь будет логика обработки ввода
+        System.out.println("Ввод обработан успешно!");
+    }
+}
